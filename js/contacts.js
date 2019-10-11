@@ -30,7 +30,11 @@ function choixOptions() {
     }
     // si utilisateur choisi de voir la liste des contacts
     if (options == 1) {
-      console.log('1- liste de contacts :\n', contacts);
+      console.log('liste de contacts :');
+      for (let i = 0; i < contacts.length; i++) {
+        console.log(`${[i + 1]}- ${contacts[i].prenom} ${contacts[i].nom}`);
+      }
+
     }
 
     // si utilisateur prefere ajouter un contact
@@ -39,7 +43,7 @@ function choixOptions() {
       const nom = prompt("Entrer un nom ");
       // pusher valeurs dans le tableau 
       contacts.push({ prenom, nom });
-let i=null;
+      let i = null;
       console.log(`Le nombre de contacts est de : ${contacts.length}`);
       console.log('Dernier contact ajouté :', contacts[contacts.length - 1]);
       // console.log(Object.values(contacts));
